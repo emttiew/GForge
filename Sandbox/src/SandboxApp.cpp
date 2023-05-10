@@ -8,7 +8,7 @@ public:
 	~Sandbox(){}
 };
 
-gforge::Application* gforge::CreateApplication()
+gforge::Application* gforge::createApplication()
 {
 	return new Sandbox();
 }

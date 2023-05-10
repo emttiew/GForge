@@ -11,6 +11,6 @@ namespace gforge {
 		void run();
 	};
 
-	Application* CreateApplication();
+	Application* createApplication();
 }
 
