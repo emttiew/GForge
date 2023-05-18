@@ -2,7 +2,7 @@
 
 #ifdef GF_PLATFORM_WINDOWS
 
-extern gforge::Application* gforge::createApplication();
+extern gforge::ApplicationPtr gforge::createApplication();
 
 int  main(int argc, char** argv)
 {
@@ -11,8 +11,7 @@ int  main(int argc, char** argv)
 	int a = 5;
 	GF_INFO("Info: Var={0}", a);
 
-	auto app = gforge::createApplication();
+	gforge::ApplicationPtr app = gforge::createApplication();
 	app->run();
-	delete app;
 }
 #endif

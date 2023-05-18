@@ -3,21 +3,24 @@
 #include "Application.h"
 #include "GForge/Log.h"
 #include "GForge/Events/ApplicationEvent.h"
+#include <GLFW/glfw3.h>
 
+#include <memory>
 
 namespace gforge {
 
+	Application::Application()
+	{
+		m_Window = Window::create();
+	}
+
 	void Application::run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.isInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			GF_TRACE(e);
+			glClearColor(1, 0, 0, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->onUpdate();
 		}
-		if (e.isInCategory(EventCategoryInput))
-		{
-			GF_TRACE(e);
-		}
-		while (true);
 	}
 }

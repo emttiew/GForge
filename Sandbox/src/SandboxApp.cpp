@@ -8,7 +8,7 @@ public:
 	~Sandbox(){}
 };
 
-gforge::Application* gforge::createApplication()
+gforge::ApplicationPtr gforge::createApplication()
 {
-	return new Sandbox();
+	return std::make_unique<Sandbox>();
 }

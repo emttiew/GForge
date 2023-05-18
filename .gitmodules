@@ -1,3 +1,6 @@
 [submodule "GForge/vendor/spdlog"]
 	path = GForge/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "GForge/vendor/glfw"]
+	path = GForge/vendor/glfw
+	url = https://github.com/emttiew/glfw.git
